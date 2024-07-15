@@ -9,6 +9,6 @@ def list_all(mongo_collection):
     """
     list all collections
     """
-    if not mongo_collection:
+    if mongo_collection is None:
         return []
     return list(mongo_collection.find())
